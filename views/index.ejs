@@ -1,0 +1,31 @@
+<%- include partials/header.ejs%>
+
+<%- include partials/main_nav.ejs%>
+
+
+<!-- Conditional Main Content -->
+
+<!-- use home_content partial for home page -->
+<% if(title == "Home"){ %>
+<%-include partials/home_content.ejs %>
+<% } %>
+
+<!-- use about_content partial for About Me page -->
+<% if(title == "About Me"){ %>
+<%-include partials/about_content.ejs %>
+<% } %>
+
+<!-- use products_content partial for Products page -->
+<% if(title == "Products"){ %>
+<%-include partials/project_content.ejs %>
+<% } %>
+
+<!-- use services_content partial for Services page -->
+<% if(title == "Services"){ %>
+<%-include partials/service_content.ejs %>
+//include home partial
+<% } %>
+
+<%- include partials/bottom_nav.ejs%>
+
+<%- include partials/footer.ejs%>

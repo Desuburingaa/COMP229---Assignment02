@@ -1,0 +1,21 @@
+/*
+app.css
+By: Han Bi
+Student #: 301176547
+Date: 09/30/2021
+*/
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
