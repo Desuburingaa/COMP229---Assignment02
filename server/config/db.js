@@ -1,4 +1,5 @@
 module.exports = 
 {
-    "URI": "mongodb://localhost/book_store"
+    //references the contacts database in mongoDB
+    "URI": "mongodb://localhost/business_contacts"
 }

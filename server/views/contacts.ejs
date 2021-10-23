@@ -5,26 +5,24 @@
 <!-- Main Content -->
 <main class='container'>
     <div class='row'>
-        <div class='col-md-offset-3 col-md-offset-8'>
+        <div class='col-md-offset-3 col-md-offset-6'>
             <h1><%= title %></h1>
             <br>
             <table class='table tabele-bordered table-striped table-hover'>
                 <!-- Header Row -->
                 <tr>
                     <th class = 'text-center'>Name</th>
-                    <th class = 'text-center'>Author</th>
-                    <th class = 'text-center'>Published Date</th>
-                    <th class = 'text-center'>Price</th>
+                    <th class = 'text-center'>Number</th>
+                    <th class = 'text-center'>Email</th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
 
-                <% for(let count =0; count < BookList.length; count++){ %>
+                <% for(let count =0; count < ContactList.length; count++){ %>
                     <tr>
-                        <td class = 'text-center'> <%= BookList[count].name %></td>
-                        <td class = 'text-center'> <%= BookList[count].author %></td>
-                        <td class = 'text-center'> <%= BookList[count].published %></td>
-                        <td class = 'text-center'> <%= BookList[count].price %></td>
+                        <td class = 'text-center'> <%= ContactList[count].name %></td>
+                        <td class = 'text-center'> <%= ContactList[count].number %></td>
+                        <td class = 'text-center'> <%= ContactList[count].email %></td>
                     </tr>
                 <% } %>
             </table>
