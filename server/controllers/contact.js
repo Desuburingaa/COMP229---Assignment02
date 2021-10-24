@@ -14,14 +14,17 @@ module.exports.displayBookList = (req, res, next) => {
         }else{
 
             res.render('contact/list',
-             {title: 'Contacts List', ContactList: ContactList});
+             {title: 'Contacts List',
+              ContactList: ContactList,
+              displayName: req.user ? req.user.displayName : ''});
         }
     });
 }
 
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('contact/add', {title: 'Add Contact'});
+    res.render('contact/add', {title: 'Add Contact',
+    displayName: req.user ? req.user.displayName : ''});
 
 }
 
@@ -54,7 +57,9 @@ module.exports.displayEditPage = (req, res, next) => {
             res.end(err);
         }else{
             //show edit view
-            res.render('contact/edit', {title:'Edit Contact', contact: editedContact});
+            res.render('contact/edit', {title:'Edit Contact',
+             contact: editedContact,
+             displayName: req.user ? req.user.displayName : ''});
         }
     })
 

@@ -8,23 +8,23 @@ let userModel = require('../models/user');
 let User = userModel.User;//user alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home'});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', { title: 'About Me' });
+    res.render('index', { title: 'About Me', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('index', { title: 'Projects' });
+    res.render('index', { title: 'Projects', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('index', { title: 'Services' });
+    res.render('index', { title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayContactMePage = (req, res, next) => {
-    res.render('form', { title: 'Contact Me' });
+    res.render('form', { title: 'Contact Me', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -109,7 +109,7 @@ module.exports.processRegisterPage = (req, res, next) => {
 
             //redirect and authenticate user 
             return passport.authenticate('local')(req, res, ()=>{
-                res.redirect('/book-list')
+                res.redirect('/contact-list')
             });
         }
     });
