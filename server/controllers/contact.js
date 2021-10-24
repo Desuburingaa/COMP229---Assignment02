@@ -18,7 +18,8 @@ module.exports.displayBookList = (req, res, next) => {
               ContactList: ContactList,
               displayName: req.user ? req.user.displayName : ''});
         }
-    });
+    }).sort({'name': 1});
+    //sort this data set by name (descending)
 }
 
 
