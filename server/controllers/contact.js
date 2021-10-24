@@ -7,7 +7,7 @@ let mongoose = require('mongoose');
 let Contact = require('../models/contact');
 
 
-module.exports.displayBookList = (req, res, next) => {
+module.exports.displayContactList = (req, res, next) => {
     Contact.find((err, ContactList) => {
         if(err){
             return console.error(err);
